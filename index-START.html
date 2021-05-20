@@ -6,7 +6,7 @@
 </head>
 <body>
 
-
+  <div class="container">
     <div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
@@ -14,12 +14,11 @@
         <div class="hand second-hand"></div>
       </div>
     </div>
+  </div>
 
 
   <style>
     html {
-      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
-      background-size: cover;
       font-family: 'helvetica neue';
       text-align: center;
       font-size: 10px;
@@ -28,24 +27,34 @@
     body {
       margin: 0;
       font-size: 2rem;
-      display: flex;
+/*      display: flex;*/
       flex: 1;
       min-height: 100vh;
       align-items: center;
     }
+
+
+    .container {
+      height: 100vh;
+      background-image: url(https://picsum.photos/2000/3000);
+      background-size: cover;
+
+    }
+
 
     .clock {
       width: 30rem;
       height: 30rem;
       border: 20px solid white;
       border-radius: 50%;
-      margin: 50px auto;
+      margin: 0px auto;
       position: relative;
+      top: 25%;
       padding: 2rem;
       box-shadow:
         0 0 0 4px rgba(0,0,0,0.1),
         inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
+        inset 0 0 10px blue,
         0 0 10px rgba(0,0,0,0.2);
     }
 
@@ -59,7 +68,7 @@
     .hand {
       width: 50%;
       height: 6px;
-      background: black;
+      background: darkblue;
       position: absolute;
       top: 50%;
       transform-origin: 100%;
